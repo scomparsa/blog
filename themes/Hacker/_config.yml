@@ -1,0 +1,15 @@
+menu:
+  Home: /
+  Archives: /archives
+  Github: https://github.com/l19861225q
+
+# duoshuo comment
+duoshuo: false
+duoshuo_name:
+
+# disqus comment
+disqus: true
+disqus_shortname: l19861225q
+
+# google analytics
+googleTrackId:

@@ -1,0 +1,18 @@
+<%- partial('_partial/head') %>
+
+<body>
+<div id="page" class="site">
+  <div id="primary" class="content-area">
+
+    <header id="header" class="inner"><%- partial('_partial/header') %></header>
+
+    <main id="main" class="site-main posts-loop" role="main">
+      <%- body %>
+    </main>
+
+    <footer id="colophon" class="site-footer" role="contentinfo"><%- partial('_partial/footer') %></footer>
+    <%- partial('_partial/googleanalytics') %>
+  </div>
+</div>
+</body>
+</html>
