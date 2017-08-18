@@ -1,0 +1,39 @@
+header,
+footer {
+	min-height: 60px;
+	position: relative;
+	max-width: 600px;
+}
+
+header h4 {
+	bottom: 0;
+	left: 0;
+	padding-top: 15px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+
+.ui-body {
+	background-position: center;
+	background-repeat: repeat-y;
+	box-shadow: 0 0 3px rgba(0,0,0,.7);
+	min-height: 50px;
+	padding: 30px 15px;
+	max-width: 592px;
+}
+
+/* adpapt mobile */
+@media screen and (max-width: 640px) {
+	header,
+	footer {
+		min-height: 30px;
+		max-width: 450px;
+	}
+
+	.ui-body {
+		max-width: 340px;
+	}
+}

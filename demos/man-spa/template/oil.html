@@ -1,0 +1,50 @@
+{% extends base.html %}
+
+{% block meta %}
+<!-- For SEO -->
+<meta name="description" content="男士按摩精油推荐 男士SPA精油推荐">
+<meta name="keywords" content="男士 按摩 男士按摩 按摩精油 精油 按摩精油推荐 精油推荐 SPA 男士SPA SPA精油 SPA精油推荐 精油TOP10">
+{% end %}
+
+{% block title %}
+男士按摩精油推荐
+{% end %}
+
+{% block body %}
+<div class="container">
+	<header>
+		<h1 class="ui-logo">男士按摩精油推荐</h1>
+	</header>
+	<div id="view-main" class="clearfix">
+		{% for oil in oil_list %}
+		<div class="ui-post">
+			<div class="ui-cover">
+				<a href="{{ oil['link'] }}" target="_blank">
+					<img src="{{ oil['cover'] }}">
+				</a>
+			</div>
+			<div class="ui-body">
+				<h3 class="ui-title">
+					<a href="{{ oil['link'] }}" target="_blank">{{ oil['title'] }}</a>
+				</h3>
+				<div class="ui-date">
+					推荐时间 <script>document.write(new Date().toLocaleDateString())</script>
+				</div>
+				<hr>
+				<p class="ui-desc">{{ oil['desc'] }}</p>
+				<hr>
+				<a href="{{ oil['link'] }}" target="_blank" class="pull-right">
+					查看详情 <i class="fa fa-long-arrow-right"></i>
+				</a>
+			</div>
+		</div>
+		{% end %}
+	</div>
+	<footer>
+		<span class="ui-copyright">
+			Copyright 2015 男士按摩精油推荐
+			<a href="">www.man-spa.com/oil</a>
+		</span>
+	</footer>
+</div>
+{% end %}

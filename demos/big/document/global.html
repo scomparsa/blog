@@ -1,0 +1,156 @@
+<div class="jumbotron">
+  <h1>全局 CSS 样式</h1>  
+  <p>了解模版的全局 CSS 样式。</p>
+</div>
+
+<!-- 概览 -->
+<div class="page-header" id="global-overview">
+  <h1>概览</h1>  
+  <p class="-doc">深入了解模版结构的关键部分，让 Web 开发变得更好、更快、更强壮。</p>
+</div>
+<h3>Normalize</h3>
+<p class="-doc">
+  为了增强跨浏览器表现的一致性，继承了 Bootstrap 的 Normalize Less 库（<a class="-doc" href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>），这是由 Nicolas Gallagher 和 Jonathan Neal 维护的一个 CSS 重置样式库。
+</p>
+<!-- /概览 -->
+<!-- 排版 -->
+<div class="page-header" id="global-typography">
+  <h1>排版</h1>
+</div>
+<h3>页面主题</h3>
+<p class="-doc">通用样式，默认主题：黑色背景，白色字体的效果。</p>
+<xmp>
+  body {
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 62.5%
+    line-height: 1.428;
+    background-color: rgba(0,0,0,.7);
+  }
+</xmp>
+<p class="-doc">
+  反色主题：白色背景，黑色字体的效果，用于话题页等。通过为 body 元素添加 .-theme-inverse 类实现。
+</p>
+<xmp>
+  <body class="-theme-inverse">
+    ...
+  </body>
+</xmp>
+<xmp>
+  .-theme-inverse {
+    color: #000;
+    background-color: #fff;
+
+    a,
+    a:hover,
+    a:visited,
+    a:focus {
+      color: #000;
+    }
+  }
+</xmp>
+<!-- /排版 -->
+<!-- 辅助类 -->
+<div class="page-header" id="global-helper">
+  <h1>辅助类</h1>
+</div>
+<h3>快速浮动</h3>
+<p class="-doc">通过添加一个类，可以将任意元素向左或向右浮动。!important 被用来明确 CSS 样式的优先级。</p>
+<xmp>
+  <div class="pull-left">...</div>
+  <div class="pull-right">...</div>
+</xmp>
+<xmp>
+  .pull-left {
+    float: left !important;
+  }
+  .pull-right {
+    float: right !important;
+  }
+</xmp>
+<h3>让内容块居中</h3>
+<p class="-doc">为任意元素设置 display: block 属性并通过 margin 属性让其中的内容居中。</p>
+<xmp>
+  <div class="center-block">...</div>
+</xmp>
+<xmp>
+  .center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+</xmp>
+<h3>清除浮动</h3>
+<p class="-doc">
+  通过为父元素添加 .clearfix 类可以很容易地清除浮动（float）。这里所使用的是 Nicolas Gallagher 创造的 <a class="-doc" href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">micro clearfix</a> 方式。
+</p>
+<xmp>
+  <div class="clearfix">...</div>
+</xmp>
+<xmp>
+  .clearfix {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+</xmp>
+<h3>图片响应式</h3>
+<p class="-doc">通过给 img 添加 .img-responsive 类可以设置图片跟随父容器响应式的缩放尺寸。</p>
+<xmp>
+  <img class="img-responsive" src="图片地址" alt="图片描述">
+</xmp>
+<xmp>
+  .img-responsive {
+    width: 100%;
+  }
+</xmp>
+<h3>位置</h3>
+<p class="-doc">通过添加 .ui-fixed-bottom 类可以设置元素固定在底部。</p>
+<xmp>
+  <div class="ui-fixed-bottom"></div>
+</xmp>
+<xmp>
+  .ui-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+</xmp>
+<h3>间距</h3>
+<p class="-doc">通过给模块添加 .mt-* 类可以设置各模块之间的垂直间距。（默认提供了 .mt-20 .mt-40 .mt-60 样式类，开发中可根据需要继续追加。）</p>
+<xmp>
+  <!-- <module-1>...</module-1> -->
+  <!-- <module-2 class="mt-*">...</module-2> -->
+</xmp>
+<xmp>
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mt-40 {
+    margin-top: 40px;
+  }
+
+  .mt-60 {
+    margin-top: 60px;
+  }
+</xmp>
+<h3>文章</h3>
+<p class="-doc">通过为 p 添加 .-article 类，可以设置其排版属性。</p>
+<xmp>
+  <p class="-article">...</p>
+</xmp>
+<xmp>
+  p.-article {
+    font-size: 2.6em;
+    line-height: 26px;
+    text-align: justify;
+  }
+</xmp>
+<!-- /辅助类 -->

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # 网站
-title: LQ's Blog # 网站标题
-subtitle: Happy first. # 网站副标题
-description: LQ's Blog # 网站描述
-author: Liu Qian # 您的名字
+title: 谦の博 # 网站标题
+subtitle:  # 网站副标题
+description:  # 网站描述
+author: 刘谦 # 您的名字
 language: zh # 网站使用的语言
 timezone: Asia/Shanghai # 网站时区
 
 # 网址
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com # 网址
-root: / # 网站根目录
+url: http://l19861225q.github.io/blog # 网址
+root: /blog/ # 网站根目录
 permalink: :year/:month/:day/:title/ # 文章的永久链接格式
 permalink_defaults: # 永久链接中各部分的默认值
 
@@ -64,12 +64,17 @@ pagination_dir: page # 分页目录
 # 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Hacker # 当前主题名称 (false = 禁用主题)
+theme: cactus-dark # 当前主题名称 (false = 禁用主题)
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: 
+deploy:
   type: git
-  repo: https://github.com/l19861225q/l19861225q.github.io.git
-  branch: master
+  repo: https://github.com/l19861225q/blog.git
+  branch: gh-pages
   message: "feat: Site updated\n\n{{ now('YYYY-MM-DD HH:mm:ss') }}"
+
+# 解决中文乱码的问题
+# https://github.com/hexojs/hexo-server/issues/23
+server:
+  compress: true

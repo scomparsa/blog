@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>荷花亲子 | 确认订单</title>
+	<link rel="stylesheet" href="css/base.min.css">
+</head>
+<body>
+	<header>
+		<div class="ui-container">
+			<a href="javascript:;" class="ui-left">
+				<i class="ui-icon ui-icon-back"></i>
+			</a>
+			<span class="ui-title">确认订单</span>
+		</div>
+	</header>
+
+	<div class="ui-container">
+		<div class="ui-order">
+			<div class="ui-list-group">
+				<div class="ui-list-group-item">
+					<div class="ui-order-address-empty text-center">
+						<div>添加地址</div>
+						<small>您还没有填写收货人地址</small>
+					</div>
+				</div>
+				<div class="ui-list-group-item">
+					<div class="ui-panel">
+						<div class="ui-panel-title">支付方式</div>
+						<div class="ui-panel-body">
+							<div class="ui-order-pay-type">
+								<i class="ui-icon ui-icon-alipay"></i>
+								支付宝
+								<input type="radio" name="payType" class="pull-right" checked>
+							</div>	
+							<hr class="hr-lg">
+							<div class="ui-order-pay-type">
+								<i class="ui-icon ui-icon-wechat"></i>
+								微信支付
+								<input type="radio" name="payType" class="pull-right">
+							</div>
+						</div>
+					</div>
+				</div>				
+				<div class="ui-list-group-item">
+					<div class="ui-panel">
+						<div class="ui-panel-title">费用详情</div>
+						<div class="ui-panel-body">
+							<ul class="list-unstyled ui-order-cost-detail">
+								<li>
+									商品总价
+									<span>¥ 226</span>
+								</li>
+								<li>
+									运费
+									<span>已包邮</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ui-list-group-item">
+					<div class="ui-panel">
+						<div class="ui-panel-title">给荷花留言</div>
+						<div class="ui-panel-body">
+							<input type="text" class="ui-input ui-input-block" placeholder="选填：交易说明或购物建议">
+						</div>
+					</div>
+				</div>
+				<div class="ui-list-group-item">
+					<div class="ui-panel">
+						<div class="ui-panel-title">其他服务</div>
+						<div class="ui-panel-body">
+							<div class="ui-order-other-service">
+								荷花亲子提供为商品开具发票服务，有需要的用户点此可进行申请，发票将单独快递至您的收货地址（不再收取邮费）
+								<i class="ui-icon ui-icon-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="ui-bottom-bar">
+		<div class="ui-container">
+			<span class="ui-bottom-text">
+				<strong class="ui-product-price">应付金额：¥ 452</strong>
+			</span>
+			<button class="ui-btn ui-btn-default ui-btn-lg pull-right">支付</button>
+		</div>
+	</div>
+</body>
+</html>

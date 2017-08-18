@@ -1,0 +1,57 @@
+body {
+	background-color: #e8e8ff;
+}
+footer {
+	color: blue;
+	margin-bottom: 15px;
+}
+.ui-title {
+	color: orange;
+	font-size: 100px;
+	text-shadow: 
+		0px 1px 0px #999, 
+		0px 2px 0px #888, 
+		0px 3px 0px #777, 
+		0px 4px 0px #666, 
+		0px 5px 0px #555, 
+		0px 6px 0px #444, 
+		0px 7px 0px #333, 
+		0px 8px 7px #001135;
+}
+.ui-desc {
+	color: #333;
+	font-size: 25px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-align: left;
+	text-indent: 30px;
+}
+.ui-strong {
+	color: red;
+}
+.ui-gallery img {
+	float: left;
+	height: 800px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	vertical-align: top;
+	width: 50%;	
+}
+@media screen and (max-width: 1024px) {
+	.ui-gallery img {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 640px) {
+	.ui-title {
+		font-size: 50px;
+	}
+	.ui-desc {
+		font-size: 20px;
+		line-height: 22px;
+	}
+	.ui-gallery img {
+		height: auto;
+		width: 100%;
+	}
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>div层位置固定和上下层次关系</title>
+    <style>
+      body{ TEXT-ALIGN: center; }
+      #center{ 
+        MARGIN-RIGHT: auto;
+        MARGIN-LEFT: auto;
+        height:200px;
+        background:#F00;
+        width:400px;
+        vertical-align:middle;
+        line-height:200px;
+      }
+
+      .fatherBox {
+        max-width: 760px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .fatherBox > div {
+        background-repeat: repeat-y;
+        background-size: 100% 100%;
+      }
+
+      .fatherBox > div > p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body bgcolor="#3399CC">
+    <div class="fatherBox">
+      <div style="background-image: url(image/resouce/0/head@2x.png)">
+        <p>
+          <span>header</span>
+          <br />
+          <span>test</span>
+        </p>
+      </div>
+      <div style="background-image: url(image/resouce/0/body@2x.png)">
+        <p>
+          <span>zktc5418</span>
+          <br />
+          
+        </p>
+      </div>
+      <div style="background-image: url(image/resouce/0/foot@2x.png)">
+        <p>
+          <span>footer</span>
+          <br />
+          <span>test</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

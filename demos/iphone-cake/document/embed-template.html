@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ title }}</h1>  
+  </div>
+</div>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="javascript:;" data-target="#tab-iphone">iPhone View</a>
+    </li>
+    <li>
+      <a href="javascript:;" data-target="#tab-ipad">iPad View</a>
+    </li>
+    <li>
+      <a href="javascript:;" data-target="#tab-desktop">desktop View</a>
+    </li>
+    <li>
+      <a href="javascript:;" data-target="#tab-code">Code</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab-iphone">
+      <iframe class="-iphone" src="{{ url }}" scrolling="{{ iframeScroll }}"></iframe>
+    </div>
+    <div class="tab-pane" id="tab-ipad">
+      <iframe class="-ipad" src="{{ url }}" scrolling="{{ iframeScroll }}"></iframe>
+    </div>
+    <div class="tab-pane" id="tab-desktop">
+      <iframe class="-desktop" src="{{ url }}" scrolling="{{ iframeScroll }}"></iframe>
+    </div>
+    <div class="tab-pane" id="tab-code">
+      <xmp>
+        {{ code }}
+      </xmp>    
+    </div>
+  </div>
+</div>

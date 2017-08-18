@@ -1,0 +1,20 @@
+{% extends base.html %}
+
+{% block title %}
+  Note Drafts
+{% end %}
+
+{% block body %}
+	<div class="page-header">
+		<h1>Note Drafts</h1>
+	</div>
+	<div id="data">
+		<span class="text-muted">
+		  <i class="glyphicon glyphicon-refresh"></i> 数据读取中...
+		</span>
+	</div>
+{% end %}
+
+{% block js %}
+  <script src="/static/js/note_drafts.js"></script>
+{% end %}

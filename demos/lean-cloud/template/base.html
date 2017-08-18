@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>{% block title %}{% end %}</title>
+	<link rel="stylesheet" href="/static/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body class="container">
+	{% block body %}{% end %}
+	
+	<script src="https://leancloud.cn/scripts/lib/av-0.4.7.min.js"></script>
+	<script src="/static/js/lib/jquery.min.js"></script>	
+	<script src="/static/js/lib/underscore.min.js"></script>	
+	<script src="/static/js/initialize.js"></script>
+	{% block js %}{% end %}
+</body>
+</html>

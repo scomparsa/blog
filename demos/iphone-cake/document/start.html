@@ -1,0 +1,156 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Getting started</h1>  
+    <p>An overview of APPCAKE Frontend Template, how to use, coding standard, and more.</p>
+  </div>
+</div>
+<div class="container">
+  <!-- Intro -->
+  <div class="page-header" id="start-intro">
+    <h1>Intro</h1>
+  </div>
+  <p>
+    APPCAKE Frontend Template based on the <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> CSS style library development, response type structure.
+  </p>
+  <!-- /Intro -->
+  <!-- HTML coding standard -->
+  <div class="page-header" id="start-HTML">
+    <h1>HTML coding standard</h1>
+  </div>
+  <h3>Document statement</h3>
+  <p>
+    Template to use certain HTML elements and CSS properties need to set the page for the HTML document type. Each page in your project will be set with reference to the following format.
+  </p>
+  <xmp>
+    <!DOCTYPE html>
+    <html lang="en">
+      ...
+    </html>
+  </xmp>
+  <h3>Charset UTF-8</h3>
+  <xmp>
+    <meta charset="utf-8">
+  </xmp>
+  <h3>Mobile devices first</h3>
+  <p>
+    On the mobile device browser, through for the <code>viewport</code> set the meta attributes to the <code>user-scalable=no</code> can disable its scale (zooming) function. After such disable zoom function, users can scroll the screen, can make your site look more like native applications.
+  </p>
+  <xmp>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </xmp>
+  <h3>SEO</h3>
+  <ul class="list-unstyled">
+    <li>
+      <code>title</code> Website title, control within 25 words, 50 bytes.
+      <xmp>
+        <title>...</title>
+      </xmp>
+    </li>
+    <li>
+      <code>keywords</code> Key words, about five, single 8 characters or less.
+      <xmp>
+        <meta name="keywords" content="..."> 
+      </xmp>
+    </li>
+    <li>
+      <code>description</code> Site descriptions, try to empty words in 80 characters, 160 characters.
+      <xmp>
+        <meta name="description" content="..."> 
+      </xmp>
+    </li>
+  </ul>
+  <h3>ico</h3>
+  <ul class="list-unstyled">
+    <li>
+      <code>Bookmark</code> The icon shown in the favorites.
+      <xmp>
+        <link rel="Bookmark" href="..."> 
+      </xmp>
+    </li>
+    <li>
+      <code>Shortcut Icon</code> The icon shown in the address bar.
+      <xmp>
+        <link rel="Shortcut Icon" href="..."> 
+      </xmp>
+    </li>
+  </ul>
+  <h3>Basic template</h3>
+  <xmp>
+    <!DOCTYPE HTML>
+    <html lang="en"> 
+    <head> 
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <title>...</title> 
+      <meta name="keywords" content="..."> 
+      <meta name="description" content="..."> 
+      <link rel="Bookmark" href="..." > 
+      <link rel="Shortcut Icon" href="..."> 
+    </head> 
+    <body>
+      ...
+    </body> 
+    </html>
+  </xmp>
+  <h3>Attrs coding sequence</h3>
+  <ul>
+    <li>class</li>
+    <li>id, name</li>
+    <li>data-*</li>
+    <li>src, for, type, href, value</li>
+    <li>alt, title</li>
+    <li>style</li>
+    <li>role</li>
+    <li>tabindex</li>
+    <li>aria-*</li>
+    <li>disabled readonly checked ...</li>
+    <li>other attrs</li>
+  </ul>
+  <h3>Others</h3>
+  <p>Comments</p>
+  <xmp>
+    start：<!-- .class-name -->
+    end：<!-- /.class-name -->
+  </xmp>
+  <p>Add <code>&lt;img&gt;</code> alt attribute, increase the accessibility.</p>
+  <xmp>
+    <img src="..." alt="..." title="...">
+  </xmp>
+  <!-- /HTML coding standard -->
+  <!-- CSS coding standard -->
+  <div class="page-header" id="start-CSS">
+    <h1>CSS coding standard</h1>
+  </div>
+  <h3>Based <a href="https://github.com/rstacruz/rscss" target="_blank">RSCSS</a> structure.</h3>
+  <p>Reasonable Standard for CSS Stylesheet Structure.</p>
+  <h3>Namespace</h3>
+  <p>Custom style class unified use <code>.ui-</code> at the beginning.</p>
+  <h3>Attrs coding sequence</h3>
+  <ul>
+    <li>
+      <strong>Position</strong> - position, top, right, bottom, left, float, clear, z-index ...
+    </li>
+    <li>
+      <strong>Model</strong> - display, padding, margin, width, height ...
+    </li>
+    <li>
+      <strong>Typograph</strong> - color, font, line-xxx, text-xxx ...
+    </li>
+    <li>
+      <strong>Visual</strong> - background, border, box-shadow ...
+    </li>
+    <li>
+      <strong>Misc</strong> - overflow, cursor, visibility ...
+    </li>    
+  </ul>
+  <h3>Others</h3>
+  <p>Comments</p>
+  <xmp>
+    use /* ... */
+  </xmp>
+  <p>
+    Module the spacing between the up and down a module under uniform <code>margin-top</code>, benefit is: if there is no more under a module will not a gap.(if for the item in a list element set <code>margin-top</code>, you need to set up the negative elements <code>margin-top negative</code> offset)
+  </p>
+  <p><code>&lt;a&gt;</code> pesudo sequence - :link :visited :hover :active (L-V-H-A)</p>
+  <!-- /CSS coding standard -->
+</div>

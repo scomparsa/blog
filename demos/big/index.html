@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+  <title>Big 模版开发文档</title>
+  <link rel="shortcut icon" href="/static/img/logo.png">
+  <link rel="stylesheet" href="static/css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/base.min.css">
+  <link rel="stylesheet" href="/static/css/document.min.css">
+  <!-- $location in HTML5 mode requires a tag to be present! More https://docs.angularjs.org/error/$location/nobase -->
+  <base href="/">
+</head>
+<body ng-app="App">
+
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/home">
+          <img src="/static/img/logo.png" alt="Logo" title="Logo">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-header-collapse">
+        <ul class="nav navbar-nav" ng-controller="navController">
+          <li ng-class="{ active: isActiveStart('/start') }">
+            <a href="#!/start">起步</a>
+          </li>
+          <li ng-class="{ active: isActiveStart('/global') }">
+            <a href="#!/global">全局 CSS 样式</a>
+          </li>
+          <li ng-class="{ active: isActiveStart('/components') }">
+            <a href="#!/components">组件</a>
+          </li>
+          <li ng-class="{ active: isActiveStart('/modules') }">
+            <a href="#!/modules">模块</a>
+          </li>
+          <li ng-class="{ active: isActiveStart('/pages') }">
+            <a href="#!/pages">页面</a>
+          </li>
+          <li ng-class="{ active: isActiveStart('/download') }">
+            <a href="#!/download">下载</a>
+          </li>
+        </ul>
+      <!-- </div> -->
+    </div>
+  </nav> 
+  
+  <div class="container" ng-view></div>
+
+  <footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <button type="button" class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer-collapse" ng-controller="navController" ng-hide="isActiveEqual('/home')">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-footer-collapse">
+        <ul class="nav navbar-nav" ng-controller="navController" ng-hide="isActiveEqual('/home')">
+          <li class="dropdown dropup" ng-class="{ active: isActiveEqual('/start') }">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#!/start">
+              起步 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#!/start#start-intro">简介</a>
+              </li>
+              <li>
+                <a href="#!/start#start-HTML">HTML 书写规范</a>
+              </li>
+              <li>
+                <a href="#!/start#start-CSS">CSS 书写规范</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown dropup" ng-class="{ active: isActiveEqual('/global') }">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#!/global" >
+              全局 CSS 样式 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#!/global#global-overview">概览</a>
+              </li>
+              <li>
+                <a href="#!/global#global-typography">排版</a>
+              </li>
+              <li>
+                <a href="#!/global#global-helper">辅助类</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown dropup" ng-class="{ active: isActiveEqual('/components') }">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#!/components" >
+              组件 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#!/components#components-badge">徽章</a>
+              </li>
+              <li>
+                <a href="#!/components#components-button">按钮</a>
+              </li>
+              <li>
+                <a href="#!/components#components-icon">图标</a>
+              </li>
+              <li>
+                <a href="#!/components#components-label">标签</a>
+              </li>
+              <li>
+                <a href="#!/components#components-panel">面板</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown dropup" ng-class="{ active: isActiveStart('/modules') }">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+              模块 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li ng-class="{ active: isActiveEqual('/modules-header-layout-fixed') }">
+                <a href="#!/modules-header-layout-fixed">Header Layout -Fixed</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-header-layout-shift') }">
+                <a href="#!/modules-header-layout-shift">Header Layout -Shift</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-main-layout-fixed') }">
+                <a href="#!/modules-main-layout-fixed">Main Layout -Fixed</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-main-layout-shift') }">
+                <a href="#!/modules-main-layout-shift">Main Layout -Shift</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-comment-panel') }">
+                <a href="#!/modules-comment-panel">Comment Panel</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-like-panel') }">
+                <a href="#!/modules-like-panel">Like Panel</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-download-bar-full') }">
+                <a href="#!/modules-download-bar-full">Download Bar -Full</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-download-bar-partial') }">
+                <a href="#!/modules-download-bar-partial">Download Bar -Partial</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-profile-item') }">
+                <a href="#!/modules-profile-item">Profile Item</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-profile-block') }">
+                <a href="#!/modules-profile-block">Profile Block</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-profile-block-publisher') }">
+                <a href="#!/modules-profile-block-publisher">Profile Block -Publisher</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-profile-recommend') }">
+                <a href="#!/modules-profile-recommend">Profile Recommend</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-brand-item') }">
+                <a href="#!/modules-brand-item">Brand Item</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-article-header') }">
+                <a href="#!/modules-article-header">Article Header</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-article-quote') }">
+                <a href="#!/modules-article-quote">Article Quote</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-meta-block') }">
+                <a href="#!/modules-meta-block">Meta Block</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-topic-header') }">
+                <a href="#!/modules-topic-header">Topic Header</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/modules-topic-block') }">
+                <a href="#!/modules-topic-block">Topic Block</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown dropup" ng-class="{ active: isActiveStart('/pages') }">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+              页面 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li ng-class="{ active: isActiveEqual('/pages-detail') }">
+                <a href="#!/pages-detail">Detail Page</a>
+              </li>
+              <li ng-class="{ active: isActiveEqual('/pages-topic') }">
+                <a href="#!/pages-topic">Topic Page</a>
+              </li>
+            </ul>
+          </li>
+          <li ng-class="{ active: isActiveEqual('/download') }">
+            <a href="#!/download">下载</a>
+          </li>
+        </ul>
+      </div>
+      <p class="navbar-text text-right">
+        Copyright ©2015<br>
+        <a href="http://106.187.103.208:9999/" target="_blank">KevinLQ's House</a> All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="static/js/lib/angular.min.js"></script>
+  <script src="static/js/lib/angular-route.min.js"></script>
+  <script src="static/js/lib/angular-md5.min.js"></script>
+  <script src="static/js/lib/jquery.min.js"></script>
+  <script src="static/js/lib/bootstrap.min.js"></script>
+  <script src="static/js/app.min.js"></script>
+</body>
+</html>

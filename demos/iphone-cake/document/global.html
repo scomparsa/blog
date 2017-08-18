@@ -1,0 +1,144 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Global CSS</h1>  
+    <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes.</p>
+  </div>
+</div>
+<div class="container">
+  <!-- Overview -->
+  <div class="page-header" id="global-overview">
+    <h1>Overview</h1>  
+    <p>Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+  </div>
+  <h3>Normalize</h3>
+  <p>
+    For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, a project by Nicolas Gallagher and Jonathan Neal.
+  </p>
+  <!-- /Overview -->
+  <!-- Typography -->
+  <div class="page-header" id="global-typography">
+    <h1>Typography</h1>
+  </div>
+  <h3>Page Body</h3>
+  <xmp>
+    body {
+      color: #000;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.428;
+      background-color: #fff;
+    }
+  </xmp>
+  <!-- /Typography -->
+  <!-- Grid System -->
+  <div class="page-header" id="global-grid">
+    <h1>Grid system</h1>
+  </div>
+  <h3>Container</h3>
+  <xmp>
+    .ui-container {
+      margin: 0 auto;
+      max-width: 960px;
+    }
+  </xmp>
+  <!-- /Grid System -->
+  <!-- Helper classes -->
+  <div class="page-header" id="global-helper">
+    <h1>Helper classes</h1>
+  </div>
+  <h3>Quick floats</h3>
+  <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues.</p>
+  <xmp>
+    <div class="pull-left">...</div>
+    <div class="pull-right">...</div>
+  </xmp>
+  <xmp>
+    .pull-left {
+      float: left !important;
+    }
+    .pull-right {
+      float: right !important;
+    }
+  </xmp>
+  <h3>Center content blocks</h3>
+  <p>Set an element to <code>display:</code> block and center via <code>margin</code>. </p>
+  <xmp>
+    <div class="center-block">...</div>
+  </xmp>
+  <xmp>
+    .center-block {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </xmp>
+  <h3>Clearfix</h3>
+  <p>
+    Easily clear <code>floats</code> by adding <code>.clearfix</code> to the parent element. Utilizes the <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">micro clearfix</a> as popularized by Nicolas Gallagher.
+  </p>
+  <xmp>
+    <div class="clearfix">...</div>
+  </xmp>
+  <xmp>
+    .clearfix {
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+  </xmp>
+  <h3>Responsive images</h3>
+  <p>
+    Images can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%</code>; and height: auto; to the image so that it scales nicely to the parent element.
+  </p>
+  <xmp>
+    <img class="img-responsive" src="..." alt="..." title="...">
+  </xmp>
+  <xmp>
+    .img-responsive {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  </xmp>
+  <!-- <h3>Position</h3>
+  <p>通过添加 .ui-fixed-bottom 类可以设置元素固定在底部。</p>
+  <xmp>
+    <div class="ui-fixed-bottom"></div>
+  </xmp>
+  <xmp>
+    .ui-fixed-bottom {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  </xmp> -->
+  <h3>Margin</h3>
+  <p>
+    Through to add the module. The <code>mt-*</code> class can set the vertical distance between each module. (the default provided
+    <code>.mt-20</code> <code>.mt-40</code> <code>.mt-60</code> style class, developing according to need to continue to increase)
+  </p>
+  <xmp>
+    <!-- <module-1>...</module-1> -->
+    <!-- <module-2 class="mt-*">...</module-2> -->
+  </xmp>
+  <xmp>
+    .mt-20 {
+      margin-top: 20px;
+    }
+
+    .mt-40 {
+      margin-top: 40px;
+    }
+
+    .mt-60 {
+      margin-top: 60px;
+    }
+  </xmp>
+  <!-- /Help classes -->
+</div>

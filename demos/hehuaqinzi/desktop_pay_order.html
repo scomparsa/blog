@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="http://www.hehua.cn/" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支付订单 - 荷花亲子</title>
+<meta name="description" content="荷花亲子" />
+<meta name="keywords" content="母婴" />
+
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="generator" content="ECMall 2.3.0" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="http://www.hehua.cn/themes/mall/hehua/styles/default/css/css.css" rel="stylesheet" type="text/css" />
+<link href="http://www.hehua.cn/themes/mall/hehua/styles/default/css/jquery.jslides.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/pay_order.min.css" />
+
+<script type="text/javascript" src="index.php?act=jslang"></script>
+<script type="text/javascript" src="http://www.hehua.cn/includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://www.hehua.cn/includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://www.hehua.cn/includes/libraries/javascript/member.js" charset="utf-8"></script>
+<!--script type="text/javascript" src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/nav.js" charset="utf-8"></script-->
+<!--script type="text/javascript" src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/select.js" charset="utf-8"></script-->
+<script type="text/javascript" src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/js.js" charset="utf-8"></script>
+
+<link rel="stylesheet" type="text/css" href="http://www.hehua.cn/themes/mall/hehua/styles/default/css/topstyle.css">
+<script type="text/javascript" src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/topjs.js"></script>
+<script src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/jquery-1.8.0.min.js" type="text/javascript"></script>   
+<script src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/jquery.jslides.js" type="text/javascript"></script>  
+<link rel=stylesheet type=text/css href="http://www.hehua.cn/themes/mall/hehua/styles/default/css/nyjdt.css">
+<script type=text/javascript src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/nyjdt.js"></script>
+<script type=text/javascript src="http://www.hehua.cn/themes/mall/hehua/styles/default/js/menu.js"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "http://www.hehua.cn";
+var REAL_SITE_URL = "http://www.hehua.cn";
+var PRICE_FORMAT = '&yen;%s';
+/*
+$(function(){
+    var select_list = document.getElementById("select_list");
+    var float_list = document.getElementById("float_list");
+    select_list.onmouseover = function () {
+        float_list.style.display = "block";
+    };
+    select_list.onmouseout = function () {
+        float_list.style.display = "none";
+    };
+});
+*/
+//]]>
+</script>
+
+<!--<editmode></editmode>-->
+<style>
+.top_nav{float:right;width:auto;padding:0;}
+.top_nav li, .top_nav li a{width:auto;}
+.top_nav li {padding:0 10px;}
+.nav .curnav{background-color:#d00e63;}
+</style>
+</head>
+
+<body>
+<style>
+.huany{width:250px;}
+</style>
+
+<div id="container">
+      <div id="tbox">
+        <a href="#fhsy" class="fhsy"></a>
+        <a href="#bikan" class="bikan"></a>
+        <a href="#baokuan" class="baokuan"></a>
+        <a href="#danpin" class="danpin"></a>
+        <a href="#fanhui" class="fanhui"></a>
+    </div>
+      <div class="top_top"><a name="fanhui" id="fanhui"></a></div>
+    <div class="top_bom">
+        <div class="tb_cen">
+            <ul class="huany">
+                <li>欢迎来荷花亲子!</li>
+                <!--li class="top_dhua">400-992-1399 </li-->
+                <li class="top_dhua"> 138-2225-9313 </li>
+
+            </ul>
+            <ul class="top_nav">
+              <li><a href="index.php?app=member">您好,buyer</a></li>
+                            <li><a href="index.php?app=member&amp;act=logout">退出</a></li>
+                            <li><a href="index.php?app=my_goods">商品管理</a></li>
+                    <li><a href="index.php?app=seller_order">订单管理</a></li>
+                    <li><a href="index.php?app=my_qa">咨询管理</a></li>
+                                                <!--<li><a href="#">手机荷花</a></li>-->
+
+            </ul>
+        </div>
+    </div>
+    <div class="header_dh">
+        <div class="header">
+            <div class="logo"><img src="data/system/logo.gif" alt="荷花亲子" /></div>
+
+            <div class="hydl">
+                <div class="hss">
+                    <form action="index.php?app=search" method="get">
+                        <div class="ssnr">
+                            <input type="text" name="keyword" />
+                        </div>
+                 <span class="ss_tj">
+                 <input name="" type="image" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/ss.jpg" alt="Search" width="107" height="38" hspace="2" border="0"/>
+                  <input type="hidden" name="app" value="search" />
+                 </span>
+
+
+                    </form>
+                </div>
+                <ul class="hybot">
+                    <li class="diyi">热门搜索:</li>
+                    <li><a href="index.php?app=search&app=search&keyword=尿不湿">尿不湿 </a></li>
+                    <li><a href="index.php?app=search&app=search&keyword=湿巾">湿巾</a></li>
+                    <li><a href="index.php?app=search&app=search&keyword=奶瓶">奶瓶</a></li>
+                    <li><a href="index.php?app=search&app=search&keyword=孕产">孕产</a></li>
+                    <li><a href="index.php?app=search&app=search&keyword=推车">推车</a></li>
+                </ul>
+
+            </div>
+
+            <ul class="nav">
+                <li><a href="index.php" class="curnav">首页</a></li>
+                <!--li><a href="index.php?app=category" >母婴商城</a></li-->
+                <!--li><a href="###">购物攻略</a></li-->
+              <!--  <li><a href="index.php?app=geeks" >达人团长</a></li> -->
+                <li><a href="index.php?app=default&act=authentic" >正品保证</a></li>
+              <!--  <li><a href="index.php?app=search&act=groupbuy" >精品团购</a></li> -->
+                <!--li><a href="index.php?app=default&act=brands">品牌库</a></li-->
+
+            </ul>
+            <div class="gouwuche"><a style="color:#fff;font-size:16px;" href="index.php?app=cart">购物车</a></div>
+        </div>
+    </div>
+<script type="text/javascript" src="http://www.hehua.cn/includes/libraries/javascript/count_down.js" ></script>
+<script>
+$(function(){
+    var options = [];
+    options['serverTime'] = 1426144909;
+    //$(".da_tg").each( function(index) {
+        //options['container'] =  $(this);
+        options['container'] =  $('.inbody');
+        brandCountDownMod.init( options );
+    //});
+});
+</script>
+    <!-- .inbody -->
+    <div class="inbody ui-clearfix">
+      <!-- .ui-pay-order -->
+      <div class="ui-pay-order">
+        <div class="ui-pay-order-wrapper">
+          <h2 class="ui-title">支付订单</h2>
+          <h3 class="ui-subtitle">订单名称</h3>
+          <ul class="ui-order-list">
+            <li class="ui-caption">
+              <ul>
+                <li>商品</li>
+                <li>数量</li>
+                <li>小记（元）</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <img src="img/jingyou.png" alt="" title="">
+                  <p>娜尔思NAERSI女装专场 - 黄/多色时尚印花长袖连衣裙</p>
+                  <p>尺码：38(160/84A)</p>
+                </li>
+                <li>1</li>
+                <li>380.00</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <img src="img/jingyou.png" alt="" title="" />
+                  <p>娜尔思NAERSI女装专场 - 黄/多色时尚印花长袖连衣裙</p>
+                  <p>尺码：38(160/84A)</p>
+                </li>
+                <li>1</li>
+                <li>380.00</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="ui-total">
+            应付总额：<span>¥ 380.00</span>
+          </p>
+          <ul class="ui-order-list">
+            <li class="ui-caption">
+              <ul>
+                <li>选择支付方式</li>  
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <p class="ui-pay-type">
+                    使用 
+                    <label>
+                      <img src="img/icon_alipay.png" alt="" title="" /> 支付宝
+                      <input type="radio" name="pay-type" />
+                    </label>
+                    <label>
+                      <img src="img/icon_wechat.png" alt="" title="" /> 微信支付
+                      <input type="radio" name="pay-type" />
+                    </label>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- submit -->
+          <p class="ui-total">
+            实付款：<span>¥ 380.00</span> <button>确定支付</button>
+          </p>
+          <!-- /submit -->
+        </div>
+      </div>
+      <!-- /.ui-pay-order -->
+      <!-- .ui-search-form -->
+      <div class="ui-search-form">
+        <form action="index.php?app=search" method="get">
+          <div class="ssnr">
+              <input type="text" name="keyword" />
+          </div>
+          <span class="ss_tj">
+            <input name="" type="image" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';" src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/ss.jpg" alt="Search" width="107" height="38" hspace="2" border="0"/>
+            <input type="hidden" name="app" value="search" />
+          </span>
+        </form>
+        <ul class="hybot">
+          <li class="diyi">热门搜索:</li>
+          <li><a href="index.php?app=search&app=search&keyword=尿不湿">尿不湿 </a></li>
+          <li><a href="index.php?app=search&app=search&keyword=湿巾">湿巾</a></li>
+          <li><a href="index.php?app=search&app=search&keyword=奶瓶">奶瓶</a></li>
+          <li><a href="index.php?app=search&app=search&keyword=孕产">孕产</a></li>
+          <li><a href="index.php?app=search&app=search&keyword=推车">推车</a></li>
+        </ul>
+      </div>
+      <!-- /.ui-search-form -->
+    </div>
+    <!-- /.inbody -->
+
+<div class="footer">
+    <div class="fcen">
+        <div class="ftp"><img src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/ftp01.jpg"; style="margin-left:-12px;"/></div>
+                <ul class="fdh_bz">
+            <li class="f_tit"><a href="index.php?app=article&cate_id=6">常见问题</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=20">支付方式</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=21">物流查询</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=22">商品退换</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=23">联系客服</a></li>
+        </ul>
+        <ul class="fdh_bz fdh_bz2"> 
+            <li class="f_tit"><a href="index.php?app=article&cate_id=7">我是买家</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=24">注册登录</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=38">购买流程 </a></li>
+            <li><a href="index.php?app=article&act=view&article_id=25">团长推荐</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=26">挑选团长</a></li>
+        </ul>
+        <ul class="fdh_bz fdh_bz2">
+            <li class="f_tit"><a href="index.php?app=article&cate_id=8">我是团长</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=27">成为团长</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=29">开团流程</a></li>
+
+        </ul>
+        <ul class="fdh_bz fdh_bz2">
+            <li class="f_tit"><a href="index.php?app=article&cate_id=9">我是商家</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=31">如何入驻</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=32">店铺管理 </a></li>
+            <li><a href="index.php?app=article&act=view&article_id=33">报团流程</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=34">店铺等级</a></li>
+
+        </ul>
+        <ul class="fdh_bz fdh_bz2">
+            <li class="f_tit"><a href="index.php?app=article&cate_id=10">关于我们</a></li>
+            <li><a href="###">手机荷花</a></li>
+            <li><a href="###">正品保障 </a></li>
+            <li><a href="###">品牌大全</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=36">关于合作</a></li>
+
+        </ul>
+        <ul class="lxdh">
+            <li class="lx01">客服热线</li>
+            <li class="lx02">13822259313</li>
+            <li class="lx03">(周一至周五，09:00-18:00）</li>
+
+        </ul>
+        <dl class="ewm">
+            <dt><img src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/ewm.jpg" /></dt>
+            <dd>官方微博</dd>
+        </dl>
+        <dl class="ewm">
+            <dt><img width="76px" src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/weixin.jpg" /></dt>
+            <dd>官方微信</dd>
+        </dl>
+        <div class="flog"><img src="http://www.hehua.cn/themes/mall/hehua/styles/default/images/flog.jpg" /></div>
+
+
+
+
+        <ul class="fdh">
+            <li><a href="index.php?app=article&act=view&article_id=37">关于荷花亲子</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=31">商家入驻 </a></li>
+            <li><a href="index.php?app=article&act=view&article_id=27">成为团长 </a></li>
+            <li><a href="">加入荷花</a></li>
+            <li><a href="index.php?app=article&act=view&article_id=36">关于合作</a></li>
+            <li class="f_last"><a href="index.php?app=article&act=view&article_id=23">联系我们</a></li>
+        </ul>
+        <p>©2015 荷花亲子 ◎www.hehua.cn 京ICP备14044522号-2</p>
+        <p>北京小宛科技有限公司</p>
+    </div>
+</div>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c1869a96cc7f4d6749c7213bd0876bc2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1254527186'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1254527186' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

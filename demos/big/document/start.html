@@ -1,0 +1,115 @@
+<div class="jumbotron">
+  <h1>起步</h1>  
+  <p>简要介绍、书写规范等。</p>
+</div>
+
+<!-- 简介 -->
+<div class="page-header" id="start-intro">
+  <h1>简介</h1>
+</div>
+<p class="-doc">
+  本套模版基于 <a class="-doc" href="http://getbootstrap.com/" target="_blank">Bootstrap CSS</a> 样式库开发，响应式结构。
+</p>
+<!-- /简介 -->
+<!-- HTML 书写规范 -->
+<div class="page-header" id="start-HTML">
+  <h1>HTML 书写规范</h1>
+</div>
+<h3>文档声明</h3>
+<p class="-doc">
+  模版中使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。
+</p>
+<xmp>
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    ...
+  </html>
+</xmp>
+<h3>文档编码 UTF-8</h3>
+<xmp>
+  <meta charset="utf-8">
+</xmp>
+<h3>移动设备优先</h3>
+<p class="-doc">
+  在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。
+</p>
+<xmp>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</xmp>
+<h3>SEO</h3>
+<xmp>
+  title 网站标题，控制在25个字、50个字节以内
+  keywords 关键词，5个左右，单个8汉字以内
+  description 网站描述，字数尽量空制在80个汉字，160个字符以内
+</xmp>
+<h3>ico</h3>
+<xmp>
+  Bookmark 收藏夹中显示的图标
+  Shortcut Icon 地址栏中显示的图标
+</xmp>
+<h3>基础模版</h3>
+<xmp>
+  <!DOCTYPE HTML>
+  <html lang="zh-CN"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>网站标题，控制在25个字、50个字节以内</title> 
+    <meta name="keywords" content="关键词，5个左右，单个8汉字以内"> 
+    <meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内"> 
+    <link rel="Bookmark" href="favicon.ico" > 
+    <link rel="Shortcut Icon" href="favicon.ico" /> 
+  </head> 
+  <body>
+    ...
+  </body> 
+  </html>
+</xmp>
+<h3>属性书写顺序</h3>
+<ul class="-doc">
+  <li>class</li>
+  <li>id, name</li>
+  <li>data-*</li>
+  <li>src, for, type, href, value</li>
+  <li>alt, title</li>
+  <li>style</li>
+  <li>other attrs</li>
+</ul>
+<h3>其他注意事项</h3>
+<p class="-doc">注释</p>
+<xmp>
+  开始：<!-- .class-name -->
+  结束：<!-- /.class-name -->
+</xmp>
+<p class="-doc">img 添加 alt 属性，增加可访问性。</p>
+<xmp>
+  <img src="图片地址" alt="图片描述" title="图片描述">
+</xmp>
+<!-- /HTML 书写规范 -->
+<!-- CSS 书写规范 -->
+<div class="page-header" id="start-CSS">
+  <h1>CSS 书写规范</h1>
+</div>
+<h3>采用 <a class="-doc" href="https://github.com/rstacruz/rscss" target="_blank">RSCSS</a> 结构</h3>
+<p class="-doc">Reasonable Standard for CSS Stylesheet Structure（CSS样式表结构合理的标准）。</p>
+<h3>命名空间</h3>
+<p class="-doc">自定义样式类统一采用 .ui- 开头。</p>
+<h3>属性书写顺序</h3>
+<ul class="-doc">
+  <li>位置（Position）: position, top, right, bottom, left, float, clear, z-index ...</li>
+  <li>盒模型（Model）: display, padding, margin, width, height ...</li>
+  <li>排版（Typography）: color, font, line-xxx, text-xxx ...</li>
+  <li>视觉（Visual）: background, border, box-shadow ...</li>
+  <li>其他（Misc）: overflow, cursor, visibility ...</li>    
+</ul>
+<h3>其他注意事项</h3>
+<p class="-doc">注释</p>
+<xmp>
+  统一使用 /* ... */
+</xmp>
+<p class="-doc">
+  上下模块之间的间距统一使用下一个模块的 margin-top 来实现，好处是：如果没有下一个模块也不会多出一段空隙。
+  （如果为列表元素中 item 设置 margin-top，需要设置负元素 margin-top 负值抵消）
+</p>
+<p class="-doc">链接 :link :visited :hover :active 书写顺序 L-V-H-A</p>
+<!-- /CSS 书写规范 -->
