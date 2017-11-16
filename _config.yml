@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # 网站
-title: 谦の博 # 网站标题
+title: 刘谦的博客 # 网站标题
 subtitle:  # 网站副标题
-description:  # 网站描述
+description: 认真做事 低调做人  # 网站描述
 author: 刘谦 # 您的名字
 language: zh # 网站使用的语言
 timezone: Asia/Shanghai # 网站时区
 
 # 网址
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://l19861225q.github.io/blog # 网址
+url: https://l19861225q.github.io/blog # 网址
 root: /blog/ # 网站根目录
 permalink: :year/:month/:day/:title/ # 文章的永久链接格式
 permalink_defaults: # 永久链接中各部分的默认值
@@ -64,7 +64,7 @@ pagination_dir: page # 分页目录
 # 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus-dark # 当前主题名称 (false = 禁用主题)
+theme: anatole # 当前主题名称 (false = 禁用主题)
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -78,3 +78,9 @@ deploy:
 # https://github.com/hexojs/hexo-server/issues/23
 server:
   compress: true
+
+archive_generator:
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
