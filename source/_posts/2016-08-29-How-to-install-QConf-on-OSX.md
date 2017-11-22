@@ -10,7 +10,7 @@ tags: QConf
 
 <!-- more -->
 
-### 1.安装 QConf
+### 1.安装 QConf（如果安装失败，尝试 sudo -s 下安装）
 - `git clone https://github.com/Qihoo360/QConf.git`
 - `cd QConf && mkdir build && cd build && cmake ..`
   <i>这里 `cmake ..` 第一次可能会报错，直接无视，再 `cmake ..` 一遍就可以了。</i>
@@ -21,7 +21,7 @@ tags: QConf
 ### 2.<a href="https://github.com/Qihoo360/QConf/wiki/FAQ" target="_blank">问题处理</a>
 #### 使用 qconf 需要调整共享内存限制
 **通过 sysctl -a | grep shm 查看当前的共享内存上限的大小，如果不足2G，则进行如下操作：**
-> 修改共享内存上限，使当前正在运行的系统生效
+> 修改共享内存上限，使当前正在运行的系统生效 `需要 sudo -s 下执行`
 > Mac 执行：
 ```shell
   sysctl kern.sysv.shmmax=2048000000
@@ -35,7 +35,7 @@ tags: QConf
 
 ### 3.启动 QConf
 - `cd /usr/local/qconf`
-- `cd bin && sh agent-cmd.sh start`
+- `cd bin && sh qconf_agent.sh start`
 
 ### 4.安装 QConf 的 Node 驱动 <a href="https://www.npmjs.com/package/node-qconf" target="_blank">node-qconf</a>
 当然也有 C++ PHP 等 <a href="https://github.com/Qihoo360/QConf/tree/master/driver" target="_blank">其他驱动</a> 咯
