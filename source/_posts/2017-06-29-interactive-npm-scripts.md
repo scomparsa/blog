@@ -1,9 +1,10 @@
 ---
 title: 交互式的 NPM Scripts
 date: 2017-06-29 15:51:16
+categories: 前端技术
 tags:
-- node
-- npm
+  - node
+  - npm
 ---
 
 尽管 Webpack 2 默认支持从终端传参数到配置文件中来实现定制：

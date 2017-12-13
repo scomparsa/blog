@@ -1,8 +1,10 @@
 ---
 title: 美化你的 <pre /> 标签
 date: 2016-07-17 10:26:57
-tags: css
-categories: css
+categories: 前端技术
+tags:
+ - html
+ - css
 ---
 
 {% asset_img pre.png %}

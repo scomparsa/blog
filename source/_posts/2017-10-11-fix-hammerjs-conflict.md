@@ -1,6 +1,7 @@
 ---
 title: 解决 HammerJS 拖拽、缩放和旋转的手势问题
 date: 2017-10-11 18:35:14
+categories: 前端技术
 tags:
  - hammerjs
  - react

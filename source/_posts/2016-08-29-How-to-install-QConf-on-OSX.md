@@ -1,7 +1,9 @@
 ---
 title: 如何在 OSX 上安装 QConf
 date: 2016-08-29 10:59:57
-tags: QConf
+categories: OSX
+tags:
+ - qconf
 ---
 
 最近，由于项目需要，需要在 Mac 上安装 <a href="https://github.com/Qihoo360/QConf" target="_blank">QConf</a>，其中的过程真是山路十八弯...
