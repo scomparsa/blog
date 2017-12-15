@@ -17,7 +17,7 @@ tags:
 
 所以决定自行实现这些事件的处理，每次旋转开始时，记录当前旋转的角度和缩放比率（因为设置了缩放和旋转可以同时触发）；旋转过程中实时计算旋转的差值来实现元素的旋转。旋转结束后再保存当前旋转的角度和缩放比率，一遍下次旋转开始时可以获取正确的值。通过 event.pointers.length 来区分拖拽还是缩放、旋转，从而避免手势的冲突。
 
-```javascript
+```js
 ...
 componentDidMount () {
   this.DOMNode = findDOMNode(this)

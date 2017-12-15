@@ -25,12 +25,12 @@ tags:
 **通过 sysctl -a | grep shm 查看当前的共享内存上限的大小，如果不足2G，则进行如下操作：**
 > 修改共享内存上限，使当前正在运行的系统生效 `需要 sudo -s 下执行`
 > Mac 执行：
-```shell
+```bash
   sysctl kern.sysv.shmmax=2048000000
   sysctl kern.sysv.shmall=4294967296
 ```
 > 修改共享内存上限，使机器重启时生效，需要在 /etc/sysctl.conf 添加：
-```shell
+```bash
   kern.sysv.shmmax=2048000000
   kern.sysv.shmall=4294967296
 ```
@@ -48,7 +48,7 @@ tags:
 
 ### 5.愉快的玩耍吧
 
-```javascript
+```js
 var qconf = require('node-qconf');
   qconf.getAllHost();
   ...
@@ -61,13 +61,13 @@ var qconf = require('node-qconf');
 多半是因为 `libqconf.dylib` 这货的路径设置问题。
 其实这货就在 `/usr/local/qconf/lib` 下，所以我也尝试过设置环境变量
 
-```shell
+```bash
   export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$QCONF_INSTALL/lib
 ```
 
 确实，这样设置以后在 Node 命令行模式下加载 `node-qconf` 已经可以了
 
-```shell
+```bash
 node
 > require('node-qconf')
 > // No error, so happy ~
@@ -88,7 +88,7 @@ Presumably, you are running El Capitan (OS X 10.11). It's a side effect of Syste
 
 后来仔细发现，报错的文件是
 
-```shell
+```bash
 ./node_modules/node-qconf/build/Release/qconf.node
 ```
 
@@ -97,7 +97,7 @@ Presumably, you are running El Capitan (OS X 10.11). It's a side effect of Syste
 
 ##### otool
 
-```shell
+```bash
 cd ./node_modules/node-qconf/build/Release/
 otool -L qconf.node
 
@@ -111,11 +111,11 @@ otool -L qconf.node
 
 ##### install_name_tool
 
-```shell
+```bash
 install_name_tool -change libqconf.dylib /usr/local/qconf/lib/libqconf.dylib ./qconf.node
 ```
 这时再执行 `otool -L qconf.node` 会发现已经被设置成为正确的路径
-```shell
+```bash
 qconf.node:
   /usr/local/qconf/lib/libqconf.dylib (compatibility version 0.0.0, current version 0.0.0)
 ```

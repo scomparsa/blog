@@ -20,7 +20,7 @@ tags:
 期初，是想在 `onDragStart` 中根据 this.angle 判断是顺/逆时针旋转。发现这个事件是拖拽开始时才触发一次，此时并不能获取到 angle：即 this.angle = 0。又翻看了源码，只有在 `onRotate`时能获取到 angle（通过 RAF，每隔一段时间监听 evt.touches 的 X, Y 位移差值，通过数学公式计算旋转角度）。
 
 源码中计算角度差并更新 DOM 的代码：
-```javascript
+```js
 if (
   Math.abs(this.lastAppliedAngle - this._angle) >= this.minimalAngleChange &&  this.transiting === false
 ) {
@@ -35,13 +35,13 @@ if (
 - `this.angle` - 本次旋转的角度值
 - `this.lastAppliedAngle` - 相邻最近旋转的一次的角度值（= this.angle），用来计算角度差值，默认是
 
-```javascript
+```js
 this.angle = options.angle || defaults.angle
 this.lastAppliedAngle = this.virtualAngle = this._angle = options.angle || defaults.angle;
 ```
 
 #### 逆时针旋转和复位
-```javascript
+```js
 onRotate: function () {
   const angleDiff = this.angle - this.lastAppliedAngle;
 
@@ -61,7 +61,7 @@ onRotate: function () {
 #### 重置 propeller
 > 用来重置 DOM 为初始角度，这里直接使用了 this，所以调用时注意 Scope
 
-```javascript
+```js
 const propellerReset = function () {
   this._angle = 0;
   this.updateCSS();
@@ -69,7 +69,7 @@ const propellerReset = function () {
 ```
 
 #### 完整的 onRotate
-```javascript
+```js
 ...
 onRotate: function () {
   const angleDiff =  this.angle - this.lastAppliedAngle;
@@ -89,7 +89,7 @@ onRotate: function () {
 rotateOrder 后续会用到。重置时注意设置一个超时（约 200 ms），保证 this.stop() 执行完再重置，否则动画会有跳帧抖动的现象。this.stop 会设置私有变量 this.active = false，当再次触发 this.update() 时会根据这个参数判断是否再次更新 DOM CSS。所以重置 propeller 的函数要手动调用一次 this.updateCSS()。
 
 #### 旋转结束时的回调
-```javascript
+```js
 onDragStart: () => {
   this.rotateOrder = CLOCKWISE;
 },

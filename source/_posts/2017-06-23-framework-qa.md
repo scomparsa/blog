@@ -42,7 +42,7 @@ tags: workflow
 
 项目结构如下：
 
-```javascript
+```js
 /hd
  - /components // 基于组件化思想，把活动页面通用的部分提出来作为公共组件，开发时可按需引入
  - /constants // 定义全局使用的常量
@@ -71,7 +71,7 @@ tags: workflow
 
 为了设计出一个通用的开发环境，满足不同的活动业务需求（可能来自运营、市场、公益等部门），需要做到彼此的项目隔离、互不影响。因此在 `/src` 目录下的第一子级是各个活动项目的源代码（命名采取：年份-{Project Name}，便于日后检索也可防止冲突）。
 
-```javascript
+```js
 /src
  - /2017-lovers // 2017 情人节活动
  - /2017-trees // 2017 植树节活动
@@ -80,7 +80,7 @@ tags: workflow
 
 因为使用了 webpack，开发时在终端输入指定的参数，定位到具体的某个活动项目，webpack 会根据当前的项目目录执行编译任务。为了适配这种通用性，会要求目录结构、文件名等要满足特定的规则：
 
-```javascript
+```js
 // 举个栗子
 /2017-nightlive
  - /components // 该项目用到的 React 组件
@@ -112,7 +112,7 @@ Babel 可以编译 `let`、`const` 等特性，但是诸如 Iterator、Generator
 
 实际情况中，在公共组件 `<App />` 中开头引入：
 
-```javascript
+```js
 // Babel Polyfill
 // Error: only one instance of babel-polyfill is allowed
 // https://github.com/stylelint/stylelint/issues/1316
@@ -157,7 +157,7 @@ ES7 不同阶段语法提案的转码规则，涵盖了 {% link stage-1 https://
 
 Babel 的配置文件是 `.babelrc`，存放在项目的根目录下，用来设置上述转码规则和插件。
 
-```javascript
+```js
 {
   "presets": [
     "env",
@@ -185,7 +185,7 @@ Babel 的配置文件是 `.babelrc`，存放在项目的根目录下，用来设
 
 ### Babel ESLint
 
-```javascript
+```js
 // .eslintrc
 parser: babel-eslint // ESLint 解析器
 ```
@@ -202,14 +202,14 @@ ESLint 允许自定义解析器。但是 ESLint 不支持 Babel 支持的一些�
 
 webpack 2.x 默认支持从命令行传参到配置文件实现按需配置。
 
-```shell
+```bash
 // Command line
 webpack -- --env.x=xxx
 ```
 
 ### 忽略解析
 
-```javascript
+```js
 noParse: vendor.map(v => new RegExp(`${v}$`))
 ```
 
@@ -217,14 +217,14 @@ webpack.module.noParse 可防止 webpack 解析那些任何与给定正则表达
 
 ### babel-loader 之 cacheDirectory
 
-```javascript
+```js
 use: 'babel-loader?cacheDirectory'
 ```
 `cacheDirectory` 可以缓存处理过的模块，对于没有修改过的文件不会再重新编译，有着2倍以上的速度提升，这对于 rebuild 有着非常大的性能提升。
 
 ### 动态匹配路径
 
-```javascript
+```js
 use: (() => {
   const loaders = [
     {
@@ -263,7 +263,7 @@ regExp 中匹配到的分组内容将会对应到下面的 [1] 处。
 
 解决办法是设置 `root` 参数，指向 webpack 编译时的当前目录。
 
-```javascript
+```js
 new CleanPlugin(somePath, {
   root: process.cwd()
 })

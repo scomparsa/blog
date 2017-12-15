@@ -27,7 +27,7 @@ tags:
 - 将要开发哪个项目（必填）
 - 可选配置（是否生成雪碧图、是否使用 CSS Module 等）
 
-```javascript
+```js
 const questions = [
   {
     name: 'project',
@@ -51,7 +51,7 @@ const questions = [
 
 ### 收集答案
 `--color` 来让终端始终高亮显示强调的内容。Inquirer 支持 Promise 特性，代码看起来也十分的简介、优雅。
-```javascript
+```js
 const args = ['--color']
 inquirer.prompt(questions).then(function ({ project, conf }) {
   // 拼接成 Webpack 2 规定的参数格式
@@ -66,7 +66,7 @@ inquirer.prompt(questions).then(function ({ project, conf }) {
 
 因为 webpack 的配置文件使用了 ES6，在启动前需要先经过 Babel 转码，需要一定的时间，这时如果能给终端 Loading 的反馈，用户体验将是美好的。
 
-```javascript
+```js
 console.log('\n') // 和上面 Inquirer 的问题保留一个空行更美观
 
 const oraInstance = ora({
@@ -82,7 +82,7 @@ const oraInstance = ora({
 
 我需要在 js 文件里执行原先定义在 `package.json` 中的 `scripts` 命令。
 
-```javascript
+```js
 const child = shell.exec(`
   NODE_ENV=development webpack --hide-modules ${args}
 `, { async: true }) // 异步执行速度更快哦
@@ -90,7 +90,7 @@ const child = shell.exec(`
 
 这里返回了子线程的实例 child，后面会用到他的 `stdout`、`stderr` 实现监听终端输出的功能。
 
-```javascript
+```js
 // npm run dev
 // Stop and clear the ora when webpack started
 child.stdout.on('data', function (data) {
@@ -105,7 +105,7 @@ child.stdout.on('data', function (data) {
 
 在 `NODE_ENV=production` 模式下，Webpack 只会产生标准错误输出 stderr，所以监听有些许改变：
 
-```javascript
+```js
 // npm run build
 child.stderr.on('data', function (data) {
   if (data.toLowerCase().includes('compiling')) {
