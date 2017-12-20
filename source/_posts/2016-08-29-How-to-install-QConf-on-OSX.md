@@ -27,17 +27,17 @@ tags:
 > Mac 执行：
 ```bash
   sysctl kern.sysv.shmmax=2048000000
-  sysctl kern.sysv.shmall=4294967296
+  sysctl kern.sysv.shmall=1073741824
 ```
 > 修改共享内存上限，使机器重启时生效，需要在 /etc/sysctl.conf 添加：
 ```bash
   kern.sysv.shmmax=2048000000
-  kern.sysv.shmall=4294967296
+  kern.sysv.shmall=1073741824
 ```
 
 ### 3.启动 QConf
 - `cd /usr/local/qconf`
-- `cd bin && sh qconf_agent.sh start`
+- `cd bin && sh agent-cmd.sh start`
 
 ### 4.安装 QConf 的 Node 驱动 <a href="https://www.npmjs.com/package/node-qconf" target="_blank">node-qconf</a>
 当然也有 C++ PHP 等 <a href="https://github.com/Qihoo360/QConf/tree/master/driver" target="_blank">其他驱动</a> 咯
