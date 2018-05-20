@@ -12,12 +12,12 @@ tags:
 
 <!-- more -->
 
-### 1.安装 QConf（如果安装失败，尝试 sudo -s 下安装）
+### 1.安装 QConf
 - `git clone https://github.com/Qihoo360/QConf.git`
 - `cd QConf && mkdir build && cd build && cmake ..`
   <i>这里 `cmake ..` 第一次可能会报错，直接无视，再 `cmake ..` 一遍就可以了。</i>
 - `make`
-- `make install`
+- `sudo make install`
   <i>安装完成以后，默认应该是在 `/usr/local/qconf` 这个路径下面</i>
 
 ### 2.<a href="https://github.com/Qihoo360/QConf/wiki/FAQ" target="_blank">问题处理</a>
@@ -36,8 +36,7 @@ tags:
 ```
 
 ### 3.启动 QConf
-- `cd /usr/local/qconf`
-- `cd bin && sh agent-cmd.sh start`
+- `cd /usr/local/qconf/bin && sh agent-cmd.sh start`
 
 ### 4.安装 QConf 的 Node 驱动 <a href="https://www.npmjs.com/package/node-qconf" target="_blank">node-qconf</a>
 当然也有 C++ PHP 等 <a href="https://github.com/Qihoo360/QConf/tree/master/driver" target="_blank">其他驱动</a> 咯
