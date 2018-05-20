@@ -6,6 +6,7 @@
     "hexo": "./node_modules/.bin/hexo"
   },
   "scripts": {
+    "new": "hexo new",
     "gen": "hexo generate",
     "svr": "hexo server",
     "deploy": "hexo deploy"
