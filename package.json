@@ -12,7 +12,7 @@
     "deploy": "hexo deploy"
   },
   "hexo": {
-    "version": "3.4.1"
+    "version": "3.8.0"
   },
   "dependencies": {
     "hexo": "^3.2.0",
