@@ -1,5 +1,5 @@
 ---
-title: 如何在 OSX 上安装 QConf
+title: 如何在 OSX 上运行 QConf
 date: 2016-08-29 10:59:57
 categories: OSX
 tags:
