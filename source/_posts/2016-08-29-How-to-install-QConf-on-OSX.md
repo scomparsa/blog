@@ -35,17 +35,27 @@ tags:
   kern.sysv.shmall=1073741824
 ```
 
-### 3.启动 QConf
+### 3.安装 flock
+> `/usr/local/qconf/bin/agent-cmd.sh:355` 用到了 `flock` 命令，但 OSX 并不支持，需要手动安装
+
+```bash
+brew tap discoteq/discoteq
+brew install flock
+```
+
+装好以后，修改（需要 sudo） `/usr/local/qconf/bin/agent-cmd.sh:355` 去掉 `-e` 参数，否则会报错。
+
+### 4.启动 QConf
 - `cd /usr/local/qconf/bin && sh agent-cmd.sh start`
 
-### 4.安装 QConf 的 Node 驱动 <a href="https://www.npmjs.com/package/node-qconf" target="_blank">node-qconf</a>
+### 5.安装 QConf 的 Node 驱动 <a href="https://www.npmjs.com/package/node-qconf" target="_blank">node-qconf</a>
 当然也有 C++ PHP 等 <a href="https://github.com/Qihoo360/QConf/tree/master/driver" target="_blank">其他驱动</a> 咯
 
 - 设置环境变量 .bashrc/.zshrc/...
   `export QCONF_INSTALL=/usr/local/qconf`
 - `npm install node-qconf`
 
-### 5.愉快的玩耍吧
+### 6.愉快的玩耍吧
 
 ```js
 var qconf = require('node-qconf');
