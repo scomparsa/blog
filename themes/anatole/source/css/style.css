@@ -666,6 +666,7 @@ a.btn {
     position: absolute;
     border-right: none;
     z-index: 1;
+    justify-content: flex-start;
   }
   .sidebar .logo-title {
     padding-top: 120px;
@@ -697,6 +698,6 @@ a.btn {
   }
 
   .share {
-    display: grid;
+    display: flex;
   }
 }
