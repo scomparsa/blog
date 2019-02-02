@@ -25,6 +25,7 @@ tags:
 - `publish` 发布（公司自建的 NPM）
 
 ```yml
+# .gitlab-ci.yml
 stages:
   - setup
   - test
@@ -36,6 +37,7 @@ stages:
 > 设置对 `node_modules/` 目录的缓存来提速后续 job 的执行。每个 job 执行时，会重置 *.gitignore* 中的文件或目录，设置缓存可避免再次安装。
 
 ```yml
+# .gitlab-ci.yml
 cache:
   # 在各个 job 之间共享该缓存
   key: "$CI_PIPELINE_ID"
@@ -49,6 +51,7 @@ cache:
 > 主要是做一些初始化的工作，项目语言是 NodeJS，所以要用 npm 安装 `node_modules/`
 
 ```yml
+# .gitlab-ci.yml
 setup:
   stage: setup
   script:
@@ -67,6 +70,7 @@ setup:
 > 执行测试用例
 
 ```yml
+# .gitlab-ci.yml
 test:
   stage: test
   script:
@@ -95,6 +99,7 @@ All files     |      100 |      100 |      100 |      100 |                   |
 > 编译构建生产代码
 
 ```yml
+# .gitlab-ci.yml
 build:
   stage: build
   script:
@@ -114,6 +119,7 @@ build:
 > 发布至 npm
 
 ```yml
+# .gitlab-ci.yml
 publish:
   stage: publish
   script:
@@ -128,6 +134,7 @@ publish:
 执行 `publish` job 时，报错说找不到命令 `bnpm not found`，但是明明在机器上安装了。bnpm 是基于 cnpm 搭建的，使用方式采用的 `bash alias` 的形式，在环境变量里进行设置：
 
 ```bash
+# .bashrc 或 .zshrc
 alias bnpm="cnpm --registry=http://xxx \
 --disturl=http://xxx \
 --registryweb=http://xxx \
@@ -146,6 +153,7 @@ unless the expand_aliases shell option is set using shopt
 > 在 job 执行前，通过 `shopt` 来扩展别名从而支持 bnpm 命令
 
 ```yml
+# .gitlab-ci.yml
 before_script:
   - shopt -s expand_aliases
   - alias bnpm='cnpm
