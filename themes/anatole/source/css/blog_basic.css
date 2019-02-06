@@ -34,7 +34,7 @@
   word-break: break-all;
 }
 
-#ds-thread,#disqus_thread,#cloud-tie-wrapper {
+#ds-thread,#disqus_thread,#cloud-tie-wrapper,#gitalk_thread {
   margin: 0 30px!important
 }
 

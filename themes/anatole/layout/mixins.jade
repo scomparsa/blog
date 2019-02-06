@@ -16,7 +16,7 @@ mixin make_post(item, is_detail)
 			.info
 				i.fa.fa-sun-o
 				span.date= date(item.date, 'YYYY-MM-DD')
-				if theme.duoshuo || theme.disqus
+				if theme.duoshuo || theme.disqus || theme.gitalk
 					i.fa.fa-comment-o
 					a(href= url_for(item.path + "#comments"))= __('Comments')
 				if item.tags

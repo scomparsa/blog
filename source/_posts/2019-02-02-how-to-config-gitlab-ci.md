@@ -1,6 +1,6 @@
 ---
 title: 如何配置 GitLab CI 
-date: 2019-02-02 14:05:00
+date: 2019-02-02 14:06:00
 categories: git
 tags:
   - gitlab

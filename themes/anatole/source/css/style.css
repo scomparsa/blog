@@ -385,7 +385,8 @@ a:hover, a:active {
   right: 6px;
 }
 
-#disqus_thread {
+#disqus_thread,
+#gitalk_thread {
   margin: 30px;
   border-bottom: 1px solid #f2f2f2;
 }
